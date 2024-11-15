@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genious</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    .navclr{color: rgba(17, 17, 17, 0.6);}
+    .btnbg{background-color: rgb(16, 144, 216);}
+    .bgnav{background-color: rgba(16, 144, 216, 0.1);}
+    .formula{color: rgb(65, 65, 65);}
+    .inbg{background-color:rgb(241, 241, 241) ;}
+</style>
+</head>
+<body class="m-12">
+    <header class="pb-12">
+             <nav class="nav-bar flex justify-between items-center bgnav px-12 py-3" >
+                <div>
+                    <ul>
+                        <li class="text-5xl font-bold">Interactive</li>
+                        <li class="text-3xl font-medium navclr">Geometry Genius</li>
+                    </ul>
+                </div>
+                <div >
+                    <button class="btnbg btn btn-primary text-white px-8">Blog</button>
+                </div>
+             </nav>
+    </header>
+    <main class="flex flex-col md:flex-row gap-6">
+          <section class="flex-1 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+            <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img
+                    src="./image/triangle.png"
+                    alt="triangle"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Triangle</h2>
+                  <p class="formula text-base">Area (A) = 0.5 * b * h</p>
+                  <div class="flex justify-between items-center">
+                    <input class="formula pl-2 py-1 w-24 inbg" id="tringle-fieldb" type="text" placeholder="b">
+                    <p class="formula text-base px-1">cm</p>
+                    <input class="formula pl-2 py-1 w-24 inbg" id="triangle-fieldh" type="text" placeholder="h">
+                    <p class="formula text-base px-1">cm</p>
+                  </div>
+                  <div class="card-actions w-full">
+                    <button id="trianglebtn" class=" btnbg btn btn-primary text-white w-full">Calculate</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img
+                    src="./image/rectangle.png"
+                    alt="Rectangle"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Rectangle</h2>
+                  <p class="formula text-base">Area (A) = l * w</p>
+                  <div class="flex justify-between items-center">
+                    <input id="ranctanglel" class="formula pl-2 py-1 w-24 inbg" type="text" placeholder="l">
+                    <p class="formula text-base px-1">cm</p>
+                    <input id="ranctanglew" class="formula pl-2 py-1 w-24 inbg" type="text" placeholder="w">
+                    <p class="formula text-base px-1">cm</p>
+                  </div>
+                  <div class="card-actions w-full">
+                    <button id="ranctanglebtn" class="btnbg btn btn-primary text-white w-full">Calculate</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img
+                    src="./image/parallelogram.png"
+                    alt="triangle"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Parallelogram</h2>
+                  <p class="formula text-base">Area (A) = b * h</p>
+                  <div class="flex justify-between items-center">
+                    <input id="parallalb" class="formula pl-2 py-1 w-24 inbg" type="text" placeholder="b">
+                    <p class="formula text-base px-1">cm</p>
+                    <input id="parallalh" class="formula pl-2 py-1 w-24 inbg" type="text" placeholder="h">
+                    <p class="formula text-base px-1">cm</p>
+                  </div>
+                  <div class="card-actions w-full">
+                    <button id="parallalbtn" class="btnbg btn btn-primary text-white w-full">Calculate</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img
+                    src="./image/rhombus.png"
+                    alt="triangle"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Rhombus</h2>
+                  <p class="formula text-base">Area (A) = 0.5 * d1 * d2</p>
+                  <div class="flex justify-between items-center">
+                    <input id="rombosa" class="formula pl-2 py-1 w-24 inbg" type="text" placeholder="d1">
+                    <p class="formula text-base px-1">cm</p>
+                    <input id="rombosb" class="formula pl-2 py-1 w-24 inbg" type="text" placeholder="d2">
+                    <p class="formula text-base px-1">cm</p>
+                  </div> 
+                  <div class="card-actions w-full">
+                    <button id="rombosbtn" class="btnbg btn btn-primary text-white w-full">Calculate</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img
+                    src="./image/pentagon.png"
+                    alt="triangle"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Pentagon</h2>
+                  <p class="formula text-base">Area (A) = 0.5 * b * p</p>
+                  <div class="flex justify-between items-center">
+                    <input id="pentagonb" class="formula pl-2 py-1 w-24 inbg" type="text" placeholder="b">
+                    <p class="formula text-base px-1">cm</p>
+                    <input id="pentagonp" class="formula pl-2 py-1 w-24 inbg" type="text" placeholder="p">
+                    <p class="formula text-base px-1">cm</p>
+                  </div>
+                  <div class="card-actions w-full">
+                    <button id="pentagonbtn" class="btnbg btn btn-primary text-white w-full">Calculate</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img
+                    src="./image/ellipse.png"
+                    alt="triangle"
+                    class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title">Ellipse</h2>
+                  <p class="formula text-base">Area (A) = pi * a * b</p>
+                  <div class="flex justify-between items-center">
+                    <input id="ellipsea" class="formula pl-2 py-1 w-24 inbg" type="text" placeholder="a">
+                    <p class="formula text-base px-1">cm</p>
+                    <input id="ellipseb" class="formula pl-2 py-1 w-24 inbg" type="text" placeholder="b">
+                    <p class="formula text-base px-1">cm</p>
+                  </div>
+                  <div class="card-actions w-full">
+                    <button id="ellipsebtn" class="btnbg btn btn-primary text-white w-full">Calculate</button>
+                  </div>
+                </div>
+              </div>
+          </section>
+          <section>
+            <div id="calculation" class="border-purple-700 border-2 h-96">
+                <h3 class="text-xl font-bold p-5 ">Area Calculation</h3>
+                <h2 id="answer" class="pl-2"></h2>
+            </div>
+          </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
